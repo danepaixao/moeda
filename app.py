@@ -38,8 +38,7 @@ number_of_trials = st.slider('Número de tentativas?', 1, 1000, 10)
 start_button = st.button('Executar')
 
 if start_button:
-    st.write(f'Executando o experimento de {number_of_trials} 
-tentativas.')
+    st.write(f'Executando o experimento de {number_of_trials} tentativas.')
     st.session_state['experiment_no'] += 1
     mean = toss_coin(number_of_trials)
     st.session_state['df_experiment_results'] = pd.concat([
